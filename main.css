@@ -15,3 +15,14 @@
 .card-button {
   margin: 0 auto;
 }
+
+.countryImg {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.input {
+  margin: 0 auto;
+  width: 60%; 
+}

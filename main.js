@@ -32,18 +32,19 @@ const printToDom = (domString, divId) =>
   printTo.innerHTML = domString;
 };
 
-const buildDomString = (countryArray) => 
+const cardMaker = (countryArray) => 
 {
   let domString = "";
-  studentArray.forEach((country) =>
+  countryArray.forEach((country) =>
   {
     domString += `<div class="card">`;
     domString +=   `<h1>${country.countryName}</h1>`;
-    domString +=   `<h3>${country.description}</h3>`;
-    domString +=   `<img src="${country.image}" alt="Image of country"><br>`;
+    domString +=   `<h5>${country.description}</h5>`;
+    domString +=   `<img class="countryImg" src="${country.image}" alt="Image of country"><br>`;
+    domString += `<input class="input" type="text" placeholder="Give a brief description of your trip here!"><br>`
     domString +=   `<button class="card-button">Submit</button>`;
     domString += `</div>`;
   })
   printToDom(domString, "card-holder");
 }
-buildDomString(students);
+cardMaker(countries);
