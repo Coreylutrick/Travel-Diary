@@ -31,3 +31,19 @@ const printToDom = (domString, divId) =>
   const printTo = document.getElementById(divId);
   printTo.innerHTML = domString;
 };
+
+const buildDomString = (countryArray) => 
+{
+  let domString = "";
+  studentArray.forEach((country) =>
+  {
+    domString += `<div class="card">`;
+    domString +=   `<h1>${country.countryName}</h1>`;
+    domString +=   `<h3>${country.description}</h3>`;
+    domString +=   `<img src="${country.image}" alt="Image of country"><br>`;
+    domString +=   `<button class="card-button">Submit</button>`;
+    domString += `</div>`;
+  })
+  printToDom(domString, "card-holder");
+}
+buildDomString(students);
