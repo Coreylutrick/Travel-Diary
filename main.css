@@ -10,6 +10,8 @@
   width: 400px;
   border: 2px solid slategray;
   text-align: center;
+  background-color: rgb(165, 151, 151);
+  border-radius: 5px;
 }
 
 .card-button {
@@ -18,11 +20,24 @@
 
 .countryImg {
   width: 70%;
-  height: auto;
+  height: 35%;
   margin: 0 auto;
 }
 
-.input {
+.input1 {
   margin: 0 auto;
   width: 60%; 
 }
+
+body {
+  background-color: rgb(71, 66, 66)
+}
+
+.diaries {
+  width: 90%;
+  height: 15%;
+  background-color: rgb(165, 151, 151);
+  text-align: center;
+  margin: 0 auto;
+}
+
