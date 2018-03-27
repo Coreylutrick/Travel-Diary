@@ -41,13 +41,24 @@ const cardMaker = (countryArray) =>
     domString +=   `<h1>${country.countryName}</h1>`;
     domString +=   `<h5>${country.description}</h5>`;
     domString +=   `<img class="countryImg" src="${country.image}" alt="Image of country"><br>`;
-    domString += `<form class="myForm"><input class="input1" type="text" value="" placeholder="Give a brief description of your trip here!"></form><br>`;
+    domString +=   `<form id="frm"><input class="input1" type="text" placeholder="Give a brief description of your trip here!"></form><br>`;
     domString +=   `<button class="card-button">Submit</button>`;
     domString += `</div>`;
   })
   printToDom(domString, "card-holder");
 }
 cardMaker(countries);
+
+// const divToGreen = (e) => 
+// {
+//     const cardDiv = e.target.parentNode;
+//     cardDiv.classList.add("green");
+// };
+
+const clearField = () => 
+{
+  const clear = document.getElementById("frm").reset();
+}
 
 const allTheButtons = document.getElementsByClassName("card-button");
 let output = document.getElementsByClassName("input1");
@@ -59,12 +70,14 @@ for (let i=0; i < allTheButtons.length; i++)
   {
     let domString = "";
     domString += `<div class="diaries">`;
-    domString += `<h1>${countries[i].countryName}</h1>`;
-    domString += `<p>${output[i].value}</p>`;
+    domString +=  `<h1>${countries[i].countryName}</h1>`;
+    domString +=  `<p>${output[i].value}</p>`;
     domString += `</div>`;
+    // divToGreen();
     diaryArray.push(domString);
     printToDom(diaryArray, "diary-holder");
+    clearField();
   })
-}
+};
 
 
