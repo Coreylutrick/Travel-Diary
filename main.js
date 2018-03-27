@@ -79,5 +79,3 @@ for (let i=0; i < allTheButtons.length; i++)
     clearField();
   })
 };
-
-
