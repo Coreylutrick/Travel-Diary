@@ -49,6 +49,8 @@ const cardMaker = (countryArray) =>
 }
 cardMaker(countries);
 
+const timestamp = new Date();
+
 const divToGreen = (e) => 
 {
     const cardDiv = e.target.parentElement;
@@ -72,6 +74,7 @@ for (let i=0; i < allTheButtons.length; i++)
     domString += `<div class="diaries">`;
     domString +=  `<h1>${countries[i].countryName}</h1>`;
     domString +=  `<p>${output[i].value}</p>`;
+    domString +=  `<p>${timestamp}</p>`
     domString += `</div>`;
     divToGreen(e);
     diaryArray.push(domString);
