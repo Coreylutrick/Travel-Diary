@@ -49,11 +49,11 @@ const cardMaker = (countryArray) =>
 }
 cardMaker(countries);
 
-// const divToGreen = (e) => 
-// {
-//     const cardDiv = e.target.parentNode;
-//     cardDiv.classList.add("green");
-// };
+const divToGreen = (e) => 
+{
+    const cardDiv = e.target.parentElement;
+    cardDiv.classList.add("green");
+};
 
 const clearField = () => 
 {
@@ -73,7 +73,7 @@ for (let i=0; i < allTheButtons.length; i++)
     domString +=  `<h1>${countries[i].countryName}</h1>`;
     domString +=  `<p>${output[i].value}</p>`;
     domString += `</div>`;
-    // divToGreen();
+    divToGreen(e);
     diaryArray.push(domString);
     printToDom(diaryArray, "diary-holder");
     clearField();
