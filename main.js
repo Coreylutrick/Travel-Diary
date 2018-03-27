@@ -73,7 +73,7 @@ for (let i=0; i < allTheButtons.length; i++)
     let domString = "";
     domString += `<div class="diaries">`;
     domString +=  `<h1>${countries[i].countryName}</h1>`;
-    domString +=  `<p>${output[i].value}</p>`;
+    domString +=  `<p><h3>${output[i].value}</h3></p>`;
     domString +=  `<p>${timestamp}</p>`
     domString += `</div>`;
     divToGreen(e);
