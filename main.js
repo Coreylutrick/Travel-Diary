@@ -1,3 +1,4 @@
+//----------------Data------------------
 const countries = [
   {
       image: "http://www.lonelyplanet.com/travel-blog/tip-article/wordpress_uploads/2017/08/shutterstock_611229743-bde2e023e33c.jpg",
@@ -26,12 +27,14 @@ const countries = [
   }
 ];
 
+//PrintToDom function
 const printToDom = (domString, divId) => 
 {
   const printTo = document.getElementById(divId);
   printTo.innerHTML = domString;
 };
 
+//Prints out the cards for each country
 const cardMaker = (countryArray) => 
 {
   let domString = "";
@@ -49,23 +52,33 @@ const cardMaker = (countryArray) =>
 }
 cardMaker(countries);
 
+//const called in the eventlistener to create a time stamp
 const timestamp = new Date();
 
+//function that changes the color of the div the my submit button is nested in
 const divToGreen = (e) => 
 {
     const cardDiv = e.target.parentElement;
     cardDiv.classList.add("green");
 };
 
+//function the clears the input filed in the div(input field must be nested in a <form></form>)
 const clearField = () => 
 {
   const clear = document.getElementById("frm").reset();
 }
 
+//tells event listener what it is attached to
 const allTheButtons = document.getElementsByClassName("card-button");
+
+//this is the user submitted data
 let output = document.getElementsByClassName("input1");
+
+//an array that will contain the information that the event listener creates
 diaryArray = [];
 
+
+//event listener
 for (let i=0; i < allTheButtons.length; i++)
 {
   allTheButtons[i].addEventListener("click", (e) =>
