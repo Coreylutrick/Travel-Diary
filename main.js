@@ -28,14 +28,14 @@ const countries = [
 ];
 
 //PrintToDom function
-const printToDom = (domString, divId) => 
+const printToDom = (domString, divId) =>
 {
   const printTo = document.getElementById(divId);
   printTo.innerHTML = domString;
 };
 
 //Prints out the cards for each country
-const cardMaker = (countryArray) => 
+const cardMaker = (countryArray) =>
 {
   let domString = "";
   countryArray.forEach((country) =>
@@ -52,18 +52,18 @@ const cardMaker = (countryArray) =>
 }
 cardMaker(countries);
 
-//const called in the eventlistener to create a time stamp
+//const called in the eventlistener to create a time stamp(called on line 90)
 const timestamp = new Date();
 
-//function that changes the color of the div the my submit button is nested in
-const divToGreen = (e) => 
+//function that changes the color of the div the my submit button is nested in(called on line 92)
+const divToGreen = (e) =>
 {
     const cardDiv = e.target.parentElement;
     cardDiv.classList.add("green");
 };
 
-//function the clears the input filed in the div(input field must be nested in a <form></form>)
-const clearField = () => 
+//function the clears the input filed in the div(input field must be nested in a <form></form>)(called on line 95)
+const clearField = () =>
 {
   const clear = document.getElementById("frm").reset();
 }
@@ -76,7 +76,6 @@ let output = document.getElementsByClassName("input1");
 
 //an array that will contain the information that the event listener creates
 diaryArray = [];
-
 
 //event listener
 for (let i=0; i < allTheButtons.length; i++)
@@ -93,5 +92,23 @@ for (let i=0; i < allTheButtons.length; i++)
     diaryArray.push(domString);
     printToDom(diaryArray, "diary-holder");
     clearField();
-  })
+  });
 };
+
+
+// const divClose = (e) =>
+// {
+//     const closer = e.target.parentElement;
+//     closer.innerHTML=``;
+// };
+// //Event2
+//   const close = document.getElementsByClassName("closeOut")
+//   for (j = 0; j<close.length; j++)
+//   {
+//     close[j].addEventListener("click", (e) =>
+//     {
+//       divClose(e);
+//     });
+//   };
+
+
