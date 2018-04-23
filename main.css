@@ -1,5 +1,6 @@
-h1 {
+.title {
   text-align: center;
+  color: rgb(165, 151, 151);
 }
 
 #card-holder {
@@ -15,7 +16,8 @@ h1 {
   border: 2px solid slategray;
   text-align: center;
   background-color: rgb(165, 151, 151);
-  border-radius: 5px;
+  border-radius: 10px;
+  border-width: medium thick;
 }
 
 .card-button {
@@ -43,8 +45,11 @@ body {
   background-color: rgb(165, 151, 151);
   text-align: center;
   margin: 0 auto;
+  border-radius: 10px;
+  border-width: medium thick;
+  border: 2px solid slategray;
 }
 
 .green {
-  background-color: green;
+  background: radial-gradient(green 50%, rgb(165, 151, 151));
 }
